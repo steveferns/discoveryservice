@@ -30,7 +30,7 @@ jobs:
         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     - name: Run my App
-      run: docker --context acicontext run -d --name discovery --domainname discovery -p 8085:8085 steveferns/discovery:prod
+      run: docker --context acicontext run -d --name discovery --domainname discovery -p 80:80 steveferns/discovery:prod
 
     - name: Test deployed server
       run: curl http://discovery.southindia.azurecontainer.io/
