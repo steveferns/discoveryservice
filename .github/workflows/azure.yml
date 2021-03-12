@@ -30,7 +30,7 @@ jobs:
         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     - name: Stop the existing Cntaiiner
-      run: docker --context acicontext rm -d --name discovery
+      run: docker --context acicontext stop -d --name discovery
 
     - name: Delete the existing Cntaiiner
       run: docker --context acicontext rm -d --name discovery
