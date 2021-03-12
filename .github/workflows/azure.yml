@@ -9,8 +9,8 @@ jobs:
  run-aci:
    runs-on: ubuntu-latest
    steps:
-	- name: Checkout code
-	  uses: actions/checkout@v2
+- name: Checkout code
+  uses: actions/checkout@v2
 - name: Install Docker Compose CLI
    run: >
   curl -L https://raw.githubusercontent.com/docker/compose-cli/main/scripts/install/install_linux.sh | sh
